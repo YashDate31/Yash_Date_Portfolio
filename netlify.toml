@@ -1,0 +1,51 @@
+
+# Netlify deployment configuration for Yash Vijay Date Portfolio
+
+[build]
+  publish = "."
+  command = ""
+
+
+# ===== HTTP HEADERS for SEO & Performance =====
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Security headers (also help with Google trust signals)
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+[[headers]]
+  for = "*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+    Content-Type = "application/xml"
+
+[[headers]]
+  for = "/robots.txt"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+# ===== REDIRECTS =====
+# www redirect (canonical)
+[[redirects]]
+  from = "https://www.yashvijaydate.netlify.app/*"
+  to = "https://yashvijaydate.netlify.app/:splat"
+  status = 301
+  force = true

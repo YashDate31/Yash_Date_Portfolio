@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ===== PRIMARY SEO META ===== -->
+  <title>Yash Vijay Date | AI/ML Developer, Content Creator & Founder of PranaAI</title>
+  <meta name="description"
+    content="Yash Vijay Date (Yash Date) — AI/ML enthusiast, full-stack developer, and content creator. Founder of PranaAI & Techify. Building intelligent web apps and developer tools. Based in India.">
+  <meta name="keywords"
+    content="Yash Date, Yash Vijay Date, Yash V Date, YashDate31, PranaAI, Techify, AI developer, ML engineer, full stack developer, content creator, portfolio, India developer">
+  <meta name="author" content="Yash Vijay Date">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://yashvijaydate.netlify.app/">
+
+  <!-- ===== OPEN GRAPH (Facebook, LinkedIn, WhatsApp) ===== -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yashvijaydate.netlify.app/">
+  <meta property="og:title" content="Yash Vijay Date | AI Developer & Content Creator">
+  <meta property="og:description"
+    content="Yash Date — AI/ML developer, founder of PranaAI, and content creator. Explore my projects, vlogs, and developer portfolio.">
+  <meta property="og:site_name" content="Yash Vijay Date Portfolio">
+  <meta property="og:locale" content="en_IN">
+
+  <!-- ===== TWITTER CARD ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Yash Vijay Date | AI Developer & Founder of PranaAI">
+  <meta name="twitter:description"
+    content="AI/ML enthusiast, full-stack developer, and content creator. Building PranaAI & secret tech.">
+  <meta name="twitter:creator" content="@
+  ">
+
+  <!-- ===== THEME & MOBILE ===== -->
+  <meta name="theme-color" content="#007ACC">
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <!-- ===== STRUCTURED DATA: Person + WebSite Schema ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://yashvijaydate.netlify.app/#person",
+        "name": "Yash Vijay Date",
+        "alternateName": ["Yash Date", "Yash V Date", "YashDate31"],
+        "description": "AI/ML enthusiast, full-stack developer, content creator, and founder of PranaAI and Techify.",
+        "url": "https://yashvijaydate.netlify.app/",
+        "email": "yashdate31@gmail.com",
+        "image": "https://github.com/YashDate31.png",
+        "sameAs": [
+          "https://github.com/YashDate31",
+          "https://linkedin.com/in/yash-date-a361a8329",
+          "https://instagram.com/_dy.patil_"
+        ],
+        "jobTitle": "AI/ML Developer & Content Creator",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "PranaAI"
+        },
+        "knowsAbout": ["Artificial Intelligence", "Machine Learning", "Web Development", "Python", "JavaScript", "React", "Next.js", "Content Creation"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://yashvijaydate.netlify.app/#website",
+        "url": "https://yashvijaydate.netlify.app/",
+        "name": "Yash Vijay Date Portfolio",
+        "description": "Personal portfolio of Yash Vijay Date — AI developer, content creator, and founder.",
+        "author": { "@id": "https://yashvijaydate.netlify.app/#person" },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://yashvijaydate.netlify.app/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- ===== FONTS ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div id="app">
+
+    <!-- =====================================================================
+       TITLE BAR
+       ===================================================================== -->
+    <header id="titlebar" role="banner" aria-label="Portfolio title bar">
+
+      <!-- Left: Logo -->
+      <div class="titlebar-left">
+        <div class="logo" onclick="openFile('readme')" role="link" tabindex="0" aria-label="Home">
+          <div class="logo-icon" aria-hidden="true">Y</div>
+          <span class="logo-text">yash vijay date</span>
+        </div>
+      </div>
+
+      <!-- Center: Search -->
+      <div class="titlebar-center">
+        <div class="search-bar" id="search-trigger" role="button" tabindex="0" aria-label="Search files (Ctrl+K)"
+          onclick="openSearch()">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            aria-hidden="true">
+            <path d="m21 21-4.34-4.34" />
+            <circle cx="11" cy="11" r="8" />
+          </svg>
+          <span style="flex:1;text-align:left;font-size:12px">Search files, topics, projects…</span>
+          <kbd>Ctrl K</kbd>
+        </div>
+      </div>
+
+      <!-- Right: Actions -->
+      <div class="titlebar-right">
+        <a href="https://github.com/YashDate31" target="_blank" rel="noopener noreferrer" class="titlebar-btn"
+          title="GitHub Profile" id="github-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+          </svg>
+          <span style="font-size:11px">YashDate31</span>
+        </a>
+
+        <!-- Settings shortcut -->
+        <button class="titlebar-btn" onclick="openFile('settings')" title="Settings (Ctrl+,)"
+          aria-label="Open settings">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            aria-hidden="true">
+            <circle cx="12" cy="12" r="3" />
+            <path
+              d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+          </svg>
+        </button>
+      </div>
+
+    </header>
+
+    <!-- =====================================================================
+       MAIN LAYOUT
+       ===================================================================== -->
+    <div id="main" role="main">
+
+      <!-- =====================================================================
+         ACTIVITY BAR
+         ===================================================================== -->
+      <nav id="activity-bar" aria-label="Primary navigation">
+
+        <div class="activity-top">
+
+          <!-- Explorer / Home -->
+          <div class="activity-item active" data-file="readme" id="explorer-activity-btn" title="Explorer" role="button"
+            tabindex="0" aria-label="Explorer">
+            <div class="active-bar"></div>
+            <div class="activity-bg"></div>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              aria-hidden="true">
+              <path d="M15 2h-4a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V8" />
+              <path d="M16.706 2.706A2.4 2.4 0 0 0 15 2v5a1 1 0 0 0 1 1h5a2.4 2.4 0 0 0-.706-1.706z" />
+              <path d="M5 7a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h8a2 2 0 0 0 1.732-1" />
+            </svg>
+            <span class="activity-tooltip">Explorer</span>
+          </div>
+
+          <!-- Search -->
+          <div class="activity-item" title="Search (Ctrl+K)" role="button" tabindex="0" aria-label="Search"
+            onclick="openSearch()">
+            <div class="activity-bg"></div>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              aria-hidden="true">
+              <path d="m21 21-4.34-4.34" />
+              <circle cx="11" cy="11" r="8" />
+            </svg>
+            <span class="activity-tooltip">Search ⌘K</span>
+          </div>
+
+          <!-- Projects -->
+          <div class="activity-item" data-file="projects" title="Projects" role="button" tabindex="0"
+            aria-label="Projects">
+            <div class="activity-bg"></div>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              aria-hidden="true">
+              <path
+                d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z" />
+              <path d="M8 10v4" />
+              <path d="M12 10v2" />
+              <path d="M16 10v6" />
+            </svg>
+            <span class="activity-tooltip">Projects</span>
+          </div>
+
+          <!-- Vlogs -->
+          <div class="activity-item" data-file="vlogs" title="Vlogs" role="button" tabindex="0" aria-label="Vlogs">
+            <div class="activity-bg"></div>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              aria-hidden="true">
+              <path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5" />
+              <rect x="2" y="6" width="14" height="12" rx="2" />
+            </svg>
+            <span class="activity-tooltip">Vlogs</span>
+          </div>
+
+        </div>
+
+        <div class="activity-bottom">
+
+          <!-- Resume -->
+          <div class="activity-item" data-file="resume" title="Resume" role="button" tabindex="0" aria-label="Resume">
+            <div class="activity-bg"></div>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              aria-hidden="true">
+              <path
+                d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" />
+              <path d="M14 2v5a1 1 0 0 0 1 1h5" />
+              <path d="M10 9H8" />
+              <path d="M16 13H8" />
+              <path d="M16 17H8" />
+            </svg>
+            <span class="activity-tooltip">Resume</span>
+          </div>
+
+          <!-- About -->
+          <div class="activity-item" data-file="about" title="About Me" role="button" tabindex="0"
+            aria-label="About me">
+            <div class="activity-bg"></div>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              aria-hidden="true">
+              <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+              <circle cx="12" cy="7" r="4" />
+            </svg>
+            <span class="activity-tooltip">About Me</span>
+          </div>
+
+          <!-- Contact -->
+          <div class="activity-item" data-file="contact" title="Contact" role="button" tabindex="0"
+            aria-label="Contact">
+            <div class="activity-bg"></div>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              aria-hidden="true">
+              <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+            </svg>
+            <span class="activity-tooltip">Contact</span>
+          </div>
+
+          <!-- Settings -->
+          <div class="activity-item" data-file="settings" title="Settings (Ctrl+,)" role="button" tabindex="0"
+            aria-label="Settings" id="settings-activity-btn">
+            <div class="activity-bg"></div>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              aria-hidden="true">
+              <circle cx="12" cy="12" r="3" />
+              <path
+                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+            </svg>
+            <span class="activity-tooltip">Settings ⌘,</span>
+          </div>
+
+        </div>
+      </nav>
+
+      <!-- =====================================================================
+         SIDEBAR
+         ===================================================================== -->
+      <aside id="sidebar" aria-label="File explorer">
+        <div class="sidebar-panel active" id="explorer-panel">
+
+          <!-- File Explorer Section -->
+          <div class="sidebar-section">
+            <div class="sidebar-header">
+              <span class="sidebar-header-title">
+                <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  style="transform:rotate(90deg)" aria-hidden="true">
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
+                Explorer
+              </span>
+            </div>
+            <div class="sidebar-file-list" id="file-list" role="listbox" aria-label="Files"></div>
+          </div>
+
+          <!-- Outline Section -->
+          <div class="sidebar-section">
+            <div class="sidebar-header">
+              <span class="sidebar-header-title">
+                <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  style="transform:rotate(90deg)" aria-hidden="true">
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
+                Outline
+              </span>
+            </div>
+            <div class="outline-section" id="outline-section"></div>
+          </div>
+
+        </div>
+      </aside>
+
+      <!-- =====================================================================
+         EDITOR AREA
+         ===================================================================== -->
+      <div id="editor-area">
+
+        <!-- Tab Bar -->
+        <div id="tabs" role="tablist" aria-label="Open editor tabs"></div>
+
+        <!-- Breadcrumb -->
+        <div id="breadcrumb" aria-label="File breadcrumb"></div>
+
+        <!-- Content View -->
+        <div id="content-view" role="region" aria-label="File content" tabindex="0"></div>
+
+      </div>
+
+      <!-- =====================================================================
+         RIGHT SIDEBAR
+         ===================================================================== -->
+      <aside id="right-sidebar" class="sidebar">
+        <div class="sidebar-panel active">
+          <!-- Information Section -->
+          <div class="sidebar-section">
+            <div class="sidebar-header">
+              <span class="sidebar-header-title">INFORMATION</span>
+            </div>
+            <div style="padding: 10px; font-size: 12px; line-height: 1.5; color: var(--text-secondary);">
+              <div style="margin-bottom: 8px;"><strong>Yash Vijay Date</strong></div>
+              <div style="margin-bottom: 8px;">AI/ML Developer & Content Creator</div>
+              <div style="margin-bottom: 8px;">📍 India</div>
+              <div style="margin-bottom: 8px;">🏢 Founder @ PranaAI</div>
+              <a href="mailto:yashdate31@gmail.com"
+                style="color: var(--accent); text-decoration: none;">yashdate31@gmail.com</a>
+            </div>
+          </div>
+
+          <!-- Outline Section -->
+          <div class="sidebar-section">
+            <div class="sidebar-header">
+              <span class="sidebar-header-title">
+                <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  style="transform:rotate(90deg)" aria-hidden="true">
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
+                OUTLINE
+              </span>
+            </div>
+            <div class="outline-section" id="right-outline-section"></div>
+          </div>
+
+          <!-- Related Section -->
+          <div class="sidebar-section">
+            <div class="sidebar-header">
+              <span class="sidebar-header-title">
+                <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  style="transform:rotate(90deg)" aria-hidden="true">
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
+                RELATED
+              </span>
+            </div>
+            <div class="outline-section">
+              <a class="outline-item" href="#" onclick="openFile('about'); return false;">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                </svg>
+                About Me
+              </a>
+              <a class="outline-item" href="#" onclick="openFile('achievements'); return false;">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                </svg>
+                Achievements
+              </a>
+              <a class="outline-item" href="#" onclick="openFile('projects'); return false;">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                </svg>
+                Projects
+              </a>
+              <a class="outline-item" href="#" onclick="openFile('vlogs'); return false;">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                </svg>
+                Vlogs
+              </a>
+              <a class="outline-item" href="#" onclick="openFile('contact'); return false;">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                </svg>
+                Contact
+              </a>
+            </div>
+          </div>
+
+          <!-- Tags Section -->
+          <div class="sidebar-section">
+            <div class="sidebar-header">
+              <span class="sidebar-header-title">
+                <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  style="transform:rotate(90deg)" aria-hidden="true">
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
+                TAGS
+              </span>
+            </div>
+            <div style="padding: 10px; display: flex; flex-wrap: wrap; gap: 6px;">
+              <span class="skill-tag" style="font-size: 10px; padding: 2px 6px;">🏷️ ai</span>
+              <span class="skill-tag" style="font-size: 10px; padding: 2px 6px;">🏷️ web</span>
+              <span class="skill-tag" style="font-size: 10px; padding: 2px 6px;">🏷️ developer</span>
+              <span class="skill-tag" style="font-size: 10px; padding: 2px 6px;">🏷️ javascript</span>
+              <span class="skill-tag" style="font-size: 10px; padding: 2px 6px;">🏷️ react</span>
+              <span class="skill-tag" style="font-size: 10px; padding: 2px 6px;">🏷️ python</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div><!-- /#main -->
+
+    <!-- =====================================================================
+       STATUS BAR
+
+       ===================================================================== -->
+    <footer id="statusbar" aria-label="Editor status bar">
+      <div class="statusbar-left">
+
+        <div class="statusbar-item" onclick="openFile('settings')" title="Open Settings" style="cursor:pointer;">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            aria-hidden="true">
+            <path
+              d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+            <path d="M9 18c-4.51 2-5-2-7-2" />
+          </svg>
+          <span id="status-file" style="font-family:var(--font-mono)">README.md</span>
+        </div>
+
+        <div class="statusbar-item" onclick="openSearch()" title="Search Files" style="cursor:pointer;">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            aria-hidden="true">
+            <path d="m21 21-4.34-4.34" />
+            <circle cx="11" cy="11" r="8" />
+          </svg>
+          <span>Search</span>
+        </div>
+
+      </div>
+
+      <div class="statusbar-right">
+
+        <div class="statusbar-item" title="Current theme" onclick="openFile('settings')" style="cursor:pointer;">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            aria-hidden="true">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M12 2a10 10 0 0 1 10 10c0 2.5-2.5 5-5 5s-5-2.5-5-5-2.5-5-5-5" />
+            <circle cx="12" cy="12" r="2" />
+          </svg>
+          <span id="status-theme">GitHub Dark</span>
+        </div>
+
+        <div class="statusbar-item" title="Language mode">
+          <span id="status-lang" style="font-family:var(--font-mono)">MARKDOWN</span>
+        </div>
+
+        <div class="statusbar-item" title="Current time">
+          <span id="status-clock" style="font-family:var(--font-mono)"></span>
+        </div>
+
+        <div class="statusbar-item" title="Encoding">
+          <span>UTF-8</span>
+        </div>
+
+      </div>
+    </footer>
+
+  </div><!-- /#app -->
+
+  <!-- =====================================================================
+     SEARCH OVERLAY
+     ===================================================================== -->
+  <div id="search-overlay" role="dialog" aria-modal="true" aria-label="Command palette">
+    <div class="search-modal">
+      <div class="search-modal-input-wrapper">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          aria-hidden="true">
+          <path d="m21 21-4.34-4.34" />
+          <circle cx="11" cy="11" r="8" />
+        </svg>
+        <input type="text" id="search-input" placeholder="Search files and topics..." autocomplete="off"
+          aria-label="Search query">
+      </div>
+      <div class="search-modal-hint">
+        <span><kbd>↑↓</kbd> navigate</span>
+        <span><kbd>Enter</kbd> open</span>
+        <span><kbd>Esc</kbd> close</span>
+      </div>
+      <div id="search-results" role="listbox" aria-label="Search results"></div>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+     TOAST CONTAINER
+     ===================================================================== -->
+  <div id="toast-container" role="alert" aria-live="polite"></div>
+
+  <!-- Scripts -->
+  <script src="content.js" charset="utf-8"></script>
+  <script src="script.js" charset="utf-8"></script>
+
+</body>
+
+</html>
