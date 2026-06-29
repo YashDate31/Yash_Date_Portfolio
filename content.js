@@ -17,7 +17,7 @@ const CONTENT = {
               <span class="status-dot"></span>
               Open to Opportunities
             </div>
-            <h1 class="hero-name">Yash Vijay Date</h1>
+            <h1 class="hero-name">Yash Date</h1>
             <p class="hero-role">AI/ML Enthusiast &amp; Content Creator</p>
             <p class="hero-desc">
               18-year-old developer building practical AI-driven products and full-stack solutions. Currently working on Secret Tech and innovating at PranaAI.
@@ -148,7 +148,7 @@ const CONTENT = {
         <section class="section">
           <h2>About Me</h2>
           <div class="card">
-            <p>I'm Yash Vijay Date, an AI/ML enthusiast, content creator, and builder. I am currently innovating at PranaAI and working on some Secret Tech!</p>
+            <p>I'm Yash Date, an AI/ML enthusiast, content creator, and builder. I am currently innovating at PranaAI and working on some Secret Tech!</p>
             <p>I specialize in building intelligent web applications, shipping developer tools, and crafting high-performance user interfaces.</p>
           </div>
         </section>
@@ -188,7 +188,7 @@ const CONTENT = {
     content: `
       <div class="doc-content">
         <div class="resume-header">
-          <h1>Yash Vijay Date</h1>
+          <h1>Yash Date</h1>
           <p class="resume-subtitle">AI/ML Enthusiast &amp; Full-Stack Developer</p>
           <div class="resume-contacts">
             <a href="mailto:yashdate31@gmail.com" class="resume-contact-link">✉ yashdate31@gmail.com</a>
